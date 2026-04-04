@@ -29,7 +29,7 @@ export default function Parcours() {
       {/* Background Decorative Accents */}
       <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-y-1/2 opacity-30"></div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         {/* Intro Tag & Headline */}
         <FadeIn direction="up">
           <div className="text-center mb-20 max-w-3xl mx-auto">

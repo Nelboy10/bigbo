@@ -49,7 +49,7 @@ export default function Process() {
       className="py-32 px-6 md:px-12 bg-transparent relative z-10 overflow-hidden"
       id="process"
     >
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-8">
           <FadeIn direction="right">

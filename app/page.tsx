@@ -9,6 +9,7 @@ import Process from "./components/Process";
 import TargetAudience from "./components/TargetAudience";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
 import AnimatedBackground from "./components/AnimatedBackground";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <About />
         <Parcours />
         <Services />
+        <Projects />
         <Difference />
         <Testimonials />
         <Process />

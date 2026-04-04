@@ -11,22 +11,35 @@ export default function Hero() {
       {/* ── Background Layers ── */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Ambient glows */}
-        <div className="absolute top-[20%] left-[15%] w-[600px] h-[600px] bg-primary/25 rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-[10%] right-[10%] w-[500px] h-[500px] bg-rose-500/12 rounded-full blur-[140px]"></div>
+        <motion.div 
+          className="absolute top-[20%] left-[15%] w-[600px] h-[600px] bg-primary/25 rounded-full blur-[150px]"
+          animate={{ scale: [1, 1.1, 1], opacity: [0.6, 0.8, 0.6] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-[10%] right-[10%] w-[500px] h-[500px] bg-rose-500/12 rounded-full blur-[140px]"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.7, 0.5] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
         <div className="absolute top-[60%] left-[50%] w-[300px] h-[300px] bg-primary-dark/30 rounded-full blur-[100px]"></div>
 
         {/* Animated Grid */}
         <div className="absolute -inset-[100%] h-[300%] w-[300%] bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:50px_50px] animate-grid opacity-40"></div>
+
+        {/* Floating particles */}
+        <motion.div className="absolute top-[30%] left-[20%] w-2 h-2 rounded-full bg-primary/40 blur-[1px]" animate={{ y: [0, -40, 0], opacity: [0.5, 1, 0.5] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} />
+        <motion.div className="absolute top-[60%] right-[30%] w-3 h-3 rounded-full bg-rose-400/30 blur-[2px]" animate={{ y: [0, 50, 0], opacity: [0.3, 0.8, 0.3] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }} />
+        <motion.div className="absolute bottom-[20%] left-[40%] w-4 h-4 rounded-full bg-white/10 blur-[2px]" animate={{ x: [0, 30, 0], y: [0, -20, 0] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }} />
 
         {/* Noise overlay */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.025] mix-blend-overlay"></div>
       </div>
 
       {/* ── Main Content ── */}
-      <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 relative z-20 pt-28 pb-20 lg:pt-0 lg:pb-0">
-        <div className="flex flex-col lg:flex-row items-center lg:items-center gap-12 lg:gap-8 min-h-[85vh]">
+      <div className="max-w-[1200px] mx-auto w-full px-6 md:px-12 relative z-20 pt-40 pb-20 lg:pt-32 lg:pb-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-12 min-h-[85vh]">
           {/* ─── LEFT: Typography ─── */}
-          <div className="lg:w-[55%] w-full flex flex-col items-center lg:items-start text-center lg:text-left order-1">
+          <div className="lg:w-1/2 w-full flex flex-col items-center lg:items-start text-center lg:text-left order-1">
             {/* Badge */}
             <motion.div
               className="inline-flex items-center gap-2.5 bg-white/[0.06] border border-white/10 px-5 py-2 rounded-full mb-8 backdrop-blur-md"
@@ -36,37 +49,39 @@ export default function Hero() {
             >
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
               <span className="text-white/80 text-[10px] md:text-xs font-label font-bold tracking-[0.2em] uppercase">
-                N°1 en Tunnels de Vente sur ComeUp
+                Top vendeur sur ComeUp
               </span>
             </motion.div>
 
             {/* Main Headline */}
             <motion.h1
-              className="font-headline text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-black text-white leading-[1.05] tracking-tight mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.35 }}
+              className="font-headline text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-black text-white leading-[1.05] tracking-tight mb-6"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
             >
-              <span className="block">Je transforme</span>
-              <span className="block">votre trafic en</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-rose-300 via-rose-100 to-rose-300 mt-1 filter drop-shadow-[0_0_20px_rgba(251,113,133,0.2)]">
-                clients payants.
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-rose-50 to-white filter drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                WAID-FINANCE
               </span>
             </motion.h1>
 
             {/* Subtext */}
-            <motion.p
-              className="font-body text-lg md:text-xl text-white/55 font-light leading-[1.8] max-w-lg mb-10"
+            <motion.div
+              className="font-body text-lg md:text-xl text-white/70 font-light leading-[1.8] max-w-2xl mb-10 space-y-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Développeur full-stack & funnel builder. Je conçois des tunnels de
-              vente et sites web qui génèrent de la{" "}
-              <span className="text-white/80 font-medium">
-                croissance mesurable et durable.
-              </span>
-            </motion.p>
+              <p className="text-white/90 font-medium text-[1.1rem] md:text-2xl leading-snug">
+                Conseiller Financier · Expert en Tunnels de Vente & Landing Pages
+              </p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 text-rose-300/90 text-sm md:text-base mt-2">
+                <span className="text-yellow-400 tracking-widest text-lg drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]">★★★★★</span>
+                <span className="font-medium">16 avis positifs</span>
+                <span className="hidden md:inline text-white/40">•</span>
+                <span className="opacity-90">Indice de performance maximal sur ComeUp</span>
+              </div>
+            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
@@ -100,42 +115,54 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.9 }}
             >
-              <div className="flex items-center gap-2">
+              <motion.div whileHover={{ y: -5 }} className="flex items-center gap-2 transition-transform">
                 <span className="font-headline font-black text-2xl text-white">50+</span>
                 <span className="font-label text-[9px] text-white/35 uppercase tracking-wider leading-tight">
                   Projets<br />livrés
                 </span>
-              </div>
+              </motion.div>
               <div className="w-px h-8 bg-white/10"></div>
-              <div className="flex items-center gap-2">
+              <motion.div whileHover={{ y: -5 }} className="flex items-center gap-2 transition-transform">
                 <span className="font-headline font-black text-2xl text-white">100%</span>
                 <span className="font-label text-[9px] text-white/35 uppercase tracking-wider leading-tight">
                   Clients<br />satisfaits
                 </span>
-              </div>
+              </motion.div>
               <div className="w-px h-8 bg-white/10"></div>
-              <div className="flex items-center gap-2">
+              <motion.div whileHover={{ y: -5 }} className="flex items-center gap-2 transition-transform">
                 <span className="font-headline font-black text-2xl text-rose-300/80">5★</span>
                 <span className="font-label text-[9px] text-white/35 uppercase tracking-wider leading-tight">
                   Note<br />ComeUp
                 </span>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
 
           {/* ─── RIGHT: Portrait ─── */}
-          <div className="lg:w-[45%] w-full flex justify-center lg:justify-end order-2 relative">
+          <div className="lg:w-1/2 w-full flex justify-center lg:justify-end order-2 relative">
             <motion.div
-              className="relative"
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             >
-              {/* Outer decorative ring */}
-              <div className="absolute -inset-6 rounded-[2.5rem] border border-primary/15 opacity-60"></div>
-              
-              {/* Secondary ring */}
-              <div className="absolute -inset-12 rounded-[3rem] border border-primary/[0.06] opacity-40"></div>
+              <motion.div
+                className="relative"
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                {/* Outer decorative ring */}
+                <motion.div 
+                  className="absolute -inset-6 rounded-[2.5rem] border border-primary/15 opacity-60"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                ></motion.div>
+                
+                {/* Secondary ring */}
+                <motion.div 
+                  className="absolute -inset-12 rounded-[3rem] border border-primary/[0.06] opacity-40"
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+                ></motion.div>
 
               {/* Main frame */}
               <div className="relative w-[300px] h-[400px] md:w-[360px] md:h-[480px] rounded-[2rem] overflow-visible group">
@@ -143,7 +170,7 @@ export default function Hero() {
                 <div className="absolute -inset-[2px] rounded-[2rem] bg-gradient-to-b from-primary/60 via-primary/20 to-rose-500/40 z-0 blur-[1px]"></div>
 
                 {/* Inner container */}
-                <div className="absolute inset-0 rounded-[2rem] overflow-hidden bg-[#110408] z-10">
+                <div className="absolute inset-0 rounded-[2rem] overflow-hidden bg-[#110408] z-10 shadow-[0_20px_50px_rgba(109,26,43,0.3)]">
                   <img
                     src="/BIGBO.png"
                     alt="Waid Finance — Expert Tunnels de Vente"
@@ -175,16 +202,18 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating certification badge */}
-              <motion.div
-                className="absolute -top-6 -right-6 z-30"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.0, type: "spring", stiffness: 200, damping: 15 }}
-              >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-[0_8px_32px_rgba(109,26,43,0.5)] border border-primary/40">
-                  <span className="material-symbols-outlined text-white text-xl">workspace_premium</span>
-                </div>
+                {/* Floating certification badge */}
+                <motion.div
+                  className="absolute -top-6 -right-6 z-30"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.0, type: "spring", stiffness: 200, damping: 15 }}
+                  whileHover={{ rotate: 15, scale: 1.1 }}
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-[0_8px_32px_rgba(109,26,43,0.5)] border border-primary/40">
+                    <span className="material-symbols-outlined text-white text-xl">workspace_premium</span>
+                  </div>
+                </motion.div>
               </motion.div>
             </motion.div>
           </div>

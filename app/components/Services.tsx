@@ -58,7 +58,7 @@ export default function Services() {
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[160px] pointer-events-none"></div>
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-rose-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-8">

@@ -40,59 +40,59 @@ export default function Testimonials() {
       {/* Background Decorative Accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/5 rounded-full blur-[200px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-24">
+        <div className="text-center mb-20">
           <FadeIn direction="up">
-            <div className="inline-flex items-center gap-2 mb-6">
-               <span className="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
-               <span className="font-label text-primary tracking-[0.4em] uppercase text-[10px] font-black">Social Proof</span>
+            <div className="inline-flex items-center gap-2 mb-4">
+               <span className="w-1 h-1 rounded-full bg-rose-400"></span>
+               <span className="font-label text-primary tracking-[0.3em] uppercase text-[9px] font-black">Social Proof</span>
             </div>
-            <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-primary-dark mb-6 leading-[1.1]">
+            <h2 className="font-headline text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-primary-dark mb-5 leading-[1.1]">
               Ce que mes <span className="text-transparent bg-clip-text bordeaux-gradient">clients disent.</span>
             </h2>
-            <p className="font-body text-xl text-on-surface/60 font-light max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body text-base md:text-lg text-on-surface/60 font-light max-w-xl mx-auto leading-relaxed">
               16 commandes complétées. 100% de satisfaction. <span className="text-primary font-medium italic">Un indice de performance maximal.</span>
             </p>
           </FadeIn>
         </div>
 
         {/* Testimonials Grid (High-End Mosaic) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
           {testimonials.map((testimonial, index) => (
             <FadeIn key={testimonial.id} delay={index * 0.2} direction="up" fullWidth>
-              <div className="group relative bg-white/60 backdrop-blur-xl border border-outline/30 rounded-[2.5rem] p-10 shadow-[0_4px_30px_rgba(109,26,43,0.02)] transition-all duration-700 hover:shadow-[0_40px_100px_rgba(109,26,43,0.08)] hover:-translate-y-2 flex flex-col h-full">
+              <div className="group relative bg-white/60 backdrop-blur-xl border border-outline/30 rounded-[1.75rem] p-8 shadow-[0_4px_30px_rgba(109,26,43,0.02)] transition-all duration-700 hover:shadow-[0_40px_100px_rgba(109,26,43,0.08)] hover:-translate-y-2 flex flex-col h-full">
                 
                 {/* Quote Icon Accent */}
-                <div className="absolute top-8 right-10 opacity-[0.05] group-hover:opacity-10 transition-opacity">
-                  <Quote size={60} className="text-primary" />
+                <div className="absolute top-6 right-6 opacity-[0.05] group-hover:opacity-10 transition-opacity">
+                  <Quote size={40} className="text-primary" />
                 </div>
 
                 <div className="relative z-10 mb-auto">
                   {/* Rating Stars */}
-                  <div className="flex gap-1 mb-8">
+                  <div className="flex gap-1 mb-6">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={14} className="text-primary fill-primary" />
+                      <Star key={i} size={12} className="text-primary fill-primary" />
                     ))}
                   </div>
                   
                   {/* Testimonial Tag */}
-                  <div className="inline-block px-3 py-1 bg-primary/5 rounded-full border border-primary/10 mb-6">
-                    <span className="font-label text-[9px] font-bold uppercase tracking-widest text-primary">
+                  <div className="inline-block px-3 py-1 bg-primary/5 rounded-full border border-primary/10 mb-5">
+                    <span className="font-label text-[8px] font-bold uppercase tracking-widest text-primary">
                       {testimonial.tag}
                     </span>
                   </div>
 
-                  <p className="font-body text-lg text-on-surface/90 leading-relaxed font-light italic mb-12 border-l-2 border-primary/10 pl-6 group-hover:border-primary transition-colors duration-500">
+                  <p className="font-body text-[15px] md:text-base text-on-surface/80 leading-relaxed font-light italic mb-8 border-l-2 border-primary/10 pl-5 group-hover:border-primary transition-colors duration-500">
                     &quot;{testimonial.content}&quot;
                   </p>
                 </div>
 
                 {/* Author Info */}
-                <div className="relative z-10 flex items-center gap-4 mt-8 pt-8 border-t border-outline/20">
+                <div className="relative z-10 flex items-center gap-4 mt-4 pt-6 border-t border-outline/20">
                   <div className="relative">
-                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm ring-4 ring-primary/5">
+                    <div className="w-12 h-12 rounded-full overflow-hidden border border-white shadow-sm ring-2 ring-primary/5 bg-surface-card">
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.name}
@@ -100,16 +100,16 @@ export default function Testimonials() {
                       />
                     </div>
                     {/* Verified badge */}
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-white shadow-sm">
-                       <span className="material-symbols-outlined text-white text-[10px] font-bold">check</span>
+                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full flex items-center justify-center border-[1.5px] border-white shadow-sm">
+                       <span className="material-symbols-outlined text-white text-[8px] font-bold">check</span>
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="font-headline font-extrabold text-primary-dark tracking-tight leading-tight">
+                    <h4 className="font-headline text-sm font-extrabold text-primary-dark tracking-tight leading-none mb-1.5">
                       {testimonial.name}
                     </h4>
-                    <p className="font-label text-[10px] font-bold text-on-surface/40 uppercase tracking-widest mt-1">
+                    <p className="font-label text-[9px] font-bold text-on-surface/40 uppercase tracking-widest">
                       {testimonial.role}
                     </p>
                   </div>

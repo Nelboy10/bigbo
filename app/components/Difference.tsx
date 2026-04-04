@@ -44,7 +44,7 @@ export default function Difference() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(109,26,43,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(109,26,43,0.5)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_at_top_right,black,transparent_70%)]"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row gap-20 items-start">
           
           {/* Sticky Left Sidebar Content */}

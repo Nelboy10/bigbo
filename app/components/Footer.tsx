@@ -63,7 +63,7 @@ export default function Footer() {
 
       {/* Main Content */}
       <div className="relative z-10 pt-24 pb-8 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           {/* Top Section: Brand + Nav */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12 pb-16 border-b border-white/5">
             {/* Brand Column */}

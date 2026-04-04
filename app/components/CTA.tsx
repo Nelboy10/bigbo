@@ -20,7 +20,7 @@ export default function CTA() {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] mix-blend-overlay"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
           {/* Left Side: Impact Copy */}

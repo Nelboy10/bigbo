@@ -33,7 +33,7 @@ export default function TargetAudience() {
       className="py-32 px-6 md:px-12 bg-transparent relative z-10 overflow-hidden"
       id="pour-qui"
     >
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         {/* Header */}
         <FadeIn direction="up">
           <div className="text-center mb-20 max-w-3xl mx-auto">

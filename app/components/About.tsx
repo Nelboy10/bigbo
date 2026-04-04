@@ -69,7 +69,7 @@ export default function About() {
         <div className="absolute top-1/4 left-[-5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[180px] pointer-events-none"></div>
         <div className="absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] bg-rose-500/10 rounded-full blur-[140px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1200px] mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
             {/* ─── LEFT: Portrait ─── */}
@@ -232,7 +232,7 @@ export default function About() {
       {/* PART 3 — Three Pillars (light background)             */}
       {/* ═══════════════════════════════════════════════════════ */}
       <div className="bg-background pt-16 pb-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <FadeIn direction="up">
             <div className="text-center mb-16">
               <h3 className="font-headline text-3xl md:text-4xl font-extrabold text-primary-dark tracking-tight mb-4">
