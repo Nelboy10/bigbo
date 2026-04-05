@@ -70,7 +70,7 @@ export default function About() {
         <div className="absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] bg-rose-500/10 rounded-full blur-[140px] pointer-events-none"></div>
 
         <div className="max-w-[1200px] mx-auto relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
 
             {/* ─── LEFT: Portrait ─── */}
             <div className="lg:w-[42%] w-full flex justify-center lg:justify-start">

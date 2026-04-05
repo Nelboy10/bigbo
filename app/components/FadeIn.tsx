@@ -12,7 +12,7 @@ interface FadeInProps {
 
 export default function FadeIn({ children, delay = 0, direction = "up", fullWidth = false }: FadeInProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
 
   const getInitialPosition = () => {
     switch (direction) {
@@ -41,7 +41,7 @@ export default function FadeIn({ children, delay = 0, direction = "up", fullWidt
       <motion.div
         initial={getInitialPosition()}
         animate={isInView ? getTargetPosition() : getInitialPosition()}
-        transition={{ duration: 0.7, delay: delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+        transition={{ duration: 0.5, delay: delay, ease: [0.21, 0.47, 0.32, 0.98] }}
         className={fullWidth ? "w-full h-full" : "h-full"}
       >
         {children}
