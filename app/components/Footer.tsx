@@ -21,6 +21,7 @@ export default function Footer() {
     { label: "Qui suis-je", href: "#about" },
     { label: "Mon Parcours", href: "#parcours" },
     { label: "Mes Services", href: "#services" },
+    { label: "Mes Réalisations", href: "#realisations" },
     { label: "Témoignages", href: "#avis" },
   ];
 
@@ -142,7 +143,7 @@ export default function Footer() {
                 Contact
               </h4>
               <a
-                href="mailto:contact@waid-finance.com"
+                href="mailto:waidbiaou@gmail.com"
                 className="group flex items-center gap-4 bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5 hover:bg-primary/10 hover:border-primary/20 transition-all duration-300"
               >
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -153,7 +154,7 @@ export default function Footer() {
                     Email
                   </span>
                   <span className="font-body text-white/80 text-sm group-hover:text-white transition-colors">
-                    contact@waid-finance.com
+                    waidbiaou@gmail.com
                   </span>
                 </div>
               </a>

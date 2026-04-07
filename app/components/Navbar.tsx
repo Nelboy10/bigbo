@@ -10,6 +10,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-8">
           <Link className="text-primary-dark/70 font-medium hover:text-primary transition-colors duration-300 font-manrope text-[14px] tracking-tight" href="#services">Services</Link>
           <Link className="text-primary-dark/70 font-medium hover:text-primary transition-colors duration-300 font-manrope text-[14px] tracking-tight" href="#parcours">Expertise</Link>
+          <Link className="text-primary-dark/70 font-medium hover:text-primary transition-colors duration-300 font-manrope text-[14px] tracking-tight" href="#realisations">Projets</Link>
           <Link className="text-primary-dark/70 font-medium hover:text-primary transition-colors duration-300 font-manrope text-[14px] tracking-tight" href="#avis">Avis</Link>
         </div>
         <Link className="bg-primary-dark text-white px-5 py-2.5 rounded-full font-headline font-bold text-[13px] tracking-wide hover:bg-primary transition-colors shadow-sm hidden sm:block" href="#contact">

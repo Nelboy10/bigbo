@@ -22,12 +22,30 @@ const projectsData = [
     icon: "movie",
   },
   {
-    category: "Executive Summary",
-    title: "Dossiers & BP",
-    description: "Conception de dossiers de présentation et pitch decks PDF architecturés pour investir banques et collaborateurs. La rigueur financière au service du design.",
-    metric: "Rigueur Bancaire",
-    url: "#contact",
-    type: "Fichiers PDF",
+    category: "Business Plan (PDF)",
+    title: "Business Plan 1",
+    description: "Dossier de présentation complet conçu pour convaincre des investisseurs et structurer une vision financière stratégique.",
+    metric: "Lire le document",
+    url: "/BUSINESS PLAN pdf (1).pdf",
+    type: "Fichier PDF",
+    icon: "picture_as_pdf",
+  },
+  {
+    category: "Business Plan (PDF)",
+    title: "Business Plan Kévin",
+    description: "Pitch deck et modélisation financière élaborés pour valider le modèle économique auprès de partenaires clés.",
+    metric: "Lire le document",
+    url: "/Business kevin PDF.pdf",
+    type: "Fichier PDF",
+    icon: "picture_as_pdf",
+  },
+  {
+    category: "Business Plan (PDF)",
+    title: "Business Plan 2",
+    description: "Analyse chiffrée et plan de développement à long terme, formaté selon les standards de rigueur bancaire.",
+    metric: "Lire le document",
+    url: "/Business plan pdf (2).pdf",
+    type: "Fichier PDF",
     icon: "picture_as_pdf",
   }
 ];
@@ -69,8 +87,8 @@ export default function Projects() {
             <FadeIn key={index} delay={index * 0.15} direction="up" fullWidth>
               <a 
                 href={project.url}
-                target={project.url.startsWith("http") ? "_blank" : "_self"}
-                rel={project.url.startsWith("http") ? "noopener noreferrer" : ""}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative h-full flex flex-col bg-white/40 backdrop-blur-xl border border-outline/30 rounded-[2.5rem] p-8 md:p-10 shadow-[0_4px_30px_rgba(109,26,43,0.02)] transition-all duration-700 hover:shadow-[0_40px_100px_rgba(109,26,43,0.08)] hover:-translate-y-2 overflow-hidden block cursor-pointer"
               >
                 {/* Hover gradient */}
@@ -129,7 +147,7 @@ export default function Projects() {
         <FadeIn direction="up" delay={0.6}>
           <div className="mt-20 text-center">
             <p className="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface/40 font-bold">
-              Certains projets plus confidentiels (PDF / BP) ne sont présentés que sur demande.
+              Certains projets plus confidentiels ne sont présentés que sur demande.
             </p>
           </div>
         </FadeIn>
